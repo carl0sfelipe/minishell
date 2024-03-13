@@ -15,7 +15,7 @@
 int	handle_append_syntax(t_token *curr, t_token *prev)
 {
 	if (prev == NULL || curr->next->next == NULL
-		|| curr->next->label != WORD || prev->label != WORD)
+		|| curr->next->label != OUT || prev->label != WORD)
 	{
 		printf("minishell: syntax error near unexpected token `>>'\n");
 		return (2);
